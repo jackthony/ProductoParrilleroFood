@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Parrillero Fast Food</string>
 
-    <string name="home_title">Chimbote</string>
-    <string name="home_description">Chimbote es una ciudad portuaria en la región de Ancash, en el norte de Perú. Es conocida por sus fábricas de pescado y como centro de transporte regional. La gran Catedral Nuestra Señora del Carmen y San Pedro Apóstol exhibe elaborado arte religioso. Cerca, el Malecón está en frente de Isla Blanca, una pequeña isla no habitada, a la que se puede acceder en bote. La ciudad sirve como punto de partida de la ruta hacia Huaraz a través de los túneles de montaña del Cañón del Pato.</string>
+    <string name="home_title">Parrillero Fast Food</string>
+    <string name="home_description">Somos una empresa dedicada a brindar momentos inolvidables y servicios gastronómicos de alta calidad; ponemos todo nuestro amor y máximo empeño en beneficio de nuestros clientes</string>
     <string name="home_title2">Clima</string>
     <string name="home_description2">Chimbote tiene veranos cortos, calientes, áridos y nublados e inviernos largos, frescos, secos y parcialmente nublado. La mejor época para realizar turismo en Chimbote es desde principios de Abril hasta mediados de Septiembre</string>
     <string name="home_title3">Lugares Turísticos</string>
@@ -14,19 +14,22 @@
     <string name="acercade_description">ChimboteFood es una aplicación que ofrece toda la información acerca de los platos típicos del Distrito de Chimbote.</string>
 
 
-    <string translatable="false" name="depth_use_explanation">When Depth is enabled on supported devices, virtual objects adapt to the environment by blending in with the real world.</string>
-    <string translatable="false" name="button_text_enable_depth">Enable</string>
-    <string translatable="false" name="button_text_disable_depth">Disable</string>
-    <string translatable="false" name="options_title_with_depth">Your device supports depth</string>
-    <string translatable="false" name="options_title_without_depth">Your device does not support depth</string>
-    <string translatable="false" name="done">Done</string>
-    <string-array translatable="false" name="depth_options_array">
+    <string name="depth_use_explanation" translatable="false">When Depth is enabled on supported devices, virtual objects adapt to the environment by blending in with the real world.</string>
+    <string name="button_text_enable_depth" translatable="false">Enable</string>
+    <string name="button_text_disable_depth" translatable="false">Disable</string>
+    <string name="options_title_with_depth" translatable="false">Your device supports depth</string>
+    <string name="options_title_without_depth" translatable="false">Your device does not support depth</string>
+    <string name="done" translatable="false">Done</string>
+    <string-array name="depth_options_array" translatable="false">
         <item>Enable depth</item>
         <item>Show depth map</item>
     </string-array>
-    <string translatable="false" name="options_title_instant_placement">Instant Placement options</string>
-    <string-array translatable="false" name="instant_placement_options_array">
+    <string name="options_title_instant_placement" translatable="false">Instant Placement options</string>
+    <string-array name="instant_placement_options_array" translatable="false">
         <item>Enable Instant Placement</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_ubicacion">UbicacionActivity</string>
 
 </resources>

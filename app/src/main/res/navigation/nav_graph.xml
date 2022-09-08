@@ -20,8 +20,13 @@
     <activity
         android:id="@+id/recomendadoActivity"
         android:name="com.example.productoparrillerofood.view.ui.activity.RecomendadoActivity"
-        android:label="activity_food"
+        android:label="activity_recomendado"
         tools:layout="@layout/activity_recomendado" />
 
     //Agregar activity ubicacion
+
+    <activity android:id="@+id/activityUbicacion"
+        android:name="com.example.productoparrillerofood.view.ui.activity.UbicacionActivity"
+        android:label="activity_ubicacion"
+        tools:layout="@layout/activity_ubicacion" />
 </navigation>

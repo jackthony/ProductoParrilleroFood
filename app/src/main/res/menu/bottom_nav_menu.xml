@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/mainActivity"
         android:icon="@drawable/ic_home"
@@ -11,9 +12,14 @@
     <item
         android:id="@+id/recomendadoActivity"
         android:icon="@drawable/ic_recomendado"
-        android:title="Platos Típicos" />
+        android:title="Recomendados" />
 
     //Agrear el item de la ubicacion
+
+    <item
+        android:id="@+id/ubicacionActivity"
+        android:icon="@drawable/ic_location"
+        android:title="Ubicacion" />
 
 
 </menu>

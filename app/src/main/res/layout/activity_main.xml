@@ -17,6 +17,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gap"
+        android:justificationMode="inter_word"
+        android:text="@string/home_description"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text"
+        android:paddingLeft="@dimen/wrapper"
+        android:paddingRight="@dimen/wrapper"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPrincipal"
+         />
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
