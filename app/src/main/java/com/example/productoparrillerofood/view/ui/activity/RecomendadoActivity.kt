@@ -68,7 +68,12 @@ class RecomendadoActivity : AppCompatActivity() {
 
         recomendadoList.add(Recomendado("Champiñones a la Parrilla", "Es un plato muy delicioso para personas que son vegetarianas.", "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/07/02/60dfbf473b0ec002c502f063.jpg"))
         recomendadoList.add(Recomendado("Anticucho de corazon de res", "En nuestro restaurant resaltan los champiñones a la parrilla. Debido a que se suele elaborar con los champiñones mas frescos que se pueden encontrar en el mercado, lo cual hace que nuestro plato sea exquisito.", "https://comidasperuanas.net/wp-content/uploads/2015/06/Anticuchos-de-Coraz%C3%B3n-Peruanos.jpg"))
-
+        recomendadoList.add(Recomendado("Chorizos a la parrilla", "Los chorizos a la parrilla de nuestro restaurante son uno de los mejores a nivel nacional debeido a que son expuesto a la parrilla al tiempo correcto", "https://www.que.es/wp-content/uploads/2021/02/Los-beneficios-que-no-conoces-del-chorizo.jpg"))
+        recomendadoList.add(Recomendado("Molleja a la parrilla", "Este plato es preparado con mucho empeño en nuestro restaurante, ya que es un plato que requiere mucha atencion del chef y aqui en el parrillero realizamos este plato con mucha dedicacion.", "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_928,h_696/https://parrillas.top/wp-content/uploads/2019/08/5565877441_7181c8b4a1_b-1024x768.jpg"))
+        recomendadoList.add(Recomendado("Pollo a la parrilla", "Este plato en el restaurant lo complementamos con papa, camote , ensalada y sus ricas cremas, quedando asi un plato delicioso.", "https://decomidaperuana.com/wp-content/uploads/2020/11/pollo-a-la-parrilla.jpg"))
+        recomendadoList.add(Recomendado("Lomo a la parrilla", "Este plato en el restaurant lo complementamos con papa, camote , ensalada y sus ricas cremas, quedando asi un plato delicioso.", "https://decomidaperuana.com/wp-content/uploads/2020/11/pollo-a-la-parrilla.jpg"))
+        recomendadoList.add(Recomendado("Especial parrillero", "Este plato es uno de los mas completos que se tiene en el restaurant debido a la variedad de carnes que contiene, es uno de los platos mas ricos que hay.", "https://img.restaurantguru.com/w550/h367/r877-meat-El-Parrillero-2021-09-1.jpgl"))
+        recomendadoList.add(Recomendado("Parrillero mixto", "Este plato es el mas completo que hay, ya que contiene todos los tipos de carnes que hay, ademas de complementos como el chorizo y la molleja, es uno de los platos mas pedidos en familia debido a su gran variedad y excelente sabor.", "https://www.laferiataypa.com/huacho/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-18-at-5.46.09-PM.jpeg"))
 
 
         adapter.setListData(recomendadoList)
@@ -79,7 +84,7 @@ class RecomendadoActivity : AppCompatActivity() {
 
         //aplicando FIREBASE
         val myRef = database.getReference("Recomendado")
-        myRef.child(myRef.push().key.toString()).setValue(recomendadoList.get(1))
+        myRef.child(myRef.push().key.toString()).setValue(recomendadoList)
 
         //observeData(binding)
 

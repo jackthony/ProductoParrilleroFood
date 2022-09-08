@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_home"
         android:title="Inicio"/>
     <item
-        android:id="@+id/platotActivity"
+        android:id="@+id/platoActivity"
         android:icon="@drawable/ic_plato"
         android:title="Todos los platos" />
     <item

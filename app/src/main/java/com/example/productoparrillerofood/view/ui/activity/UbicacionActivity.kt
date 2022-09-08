@@ -49,7 +49,6 @@ class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback{
 
                 }
 
-
                 R.id.ubicacionActivity -> {
 
                 }
@@ -60,8 +59,7 @@ class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback{
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.maps) as SupportMapFragment
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.maps) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
 
@@ -80,9 +78,9 @@ class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback{
         mMap = googleMap
         val ubicacion = Ubicacion()
         val zoom= 18f
-        // Add a marker in Sydney and move the camera
+        // Add a marker in Parrillero and move the camera
         val centerMap = LatLng(ubicacion.latitude, ubicacion.longitude)
-        mMap.addMarker(MarkerOptions().position(centerMap).title("Parrillero Fast Food"))
+        mMap.addMarker(MarkerOptions().position(centerMap).title(ubicacion.nombre))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centerMap,zoom))
     }
 
