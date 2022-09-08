@@ -1,9 +1,12 @@
 package com.example.productoparrillerofood.view.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.productoparrillerofood.MainActivity
 import com.example.productoparrillerofood.R
 import com.example.productoparrillerofood.databinding.ActivityUbicacionBinding
+import com.example.productoparrillerofood.model.Ubicacion
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -13,21 +16,55 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 
-class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback {
+class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback{
 
     private lateinit var mMap: GoogleMap
-    private lateinit var binding: ActivityUbicacionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityUbicacionBinding.inflate(layoutInflater)
+        val binding = ActivityUbicacionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // bottom navigation
+        val bottomNavigationView = binding.bottomNavigationView
+        bottomNavigationView.setSelectedItemId(R.id.ubicacionActivity)
+
+        bottomNavigationView.setOnItemSelectedListener{
+                item ->
+            when (item.itemId) {
+                R.id.mainActivity -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0,0)
+                }
+                R.id.platoActivity -> {
+                    val intent2 = Intent(this, PlatoActivity::class.java)
+                    startActivity(intent2)
+                    overridePendingTransition(0,0)
+                }
+                R.id.recomendadoActivity -> {
+                    val intent3 = Intent(this, RecomendadoActivity::class.java)
+                    startActivity(intent3)
+                    overridePendingTransition(0,0)
+
+                }
+
+
+                R.id.ubicacionActivity -> {
+
+                }
+            }
+            true
+        }
+        // end bottom navigation
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
+            .findFragmentById(R.id.maps) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+
     }
 
     /**
@@ -41,11 +78,12 @@ class UbicacionActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
+        val ubicacion = Ubicacion()
+        val zoom= 18f
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val centerMap = LatLng(ubicacion.latitude, ubicacion.longitude)
+        mMap.addMarker(MarkerOptions().position(centerMap).title("Parrillero Fast Food"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centerMap,zoom))
     }
 
 }

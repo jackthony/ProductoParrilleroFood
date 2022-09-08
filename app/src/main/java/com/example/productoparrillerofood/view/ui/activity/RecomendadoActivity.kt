@@ -48,12 +48,12 @@ class RecomendadoActivity : AppCompatActivity() {
                 R.id.recomendadoActivity -> {
                 }
 
-                /** Agregar el activity de ubicacion
-                R.id.aboutActivity -> {
-                    val intent3 = Intent(this, AboutActivity::class.java)
+
+                R.id.ubicacionActivity -> {
+                    val intent3 = Intent(this, UbicacionActivity::class.java)
                     startActivity(intent3)
                     overridePendingTransition(0,0)
-                } **/
+                }
             }
             true
         }

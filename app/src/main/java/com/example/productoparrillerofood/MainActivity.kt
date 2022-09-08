@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.productoparrillerofood.databinding.ActivityMainBinding
 import com.example.productoparrillerofood.view.ui.activity.PlatoActivity
 import com.example.productoparrillerofood.view.ui.activity.RecomendadoActivity
+import com.example.productoparrillerofood.view.ui.activity.UbicacionActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,12 +33,12 @@ class MainActivity : AppCompatActivity() {
                     overridePendingTransition(0,0)
                 }
 
-                /** AGREGAR UBICACION
-                R.id.aboutActivity -> {
-                    val intent3 = Intent(this, AboutActivity::class.java)
+
+                R.id.ubicacionActivity -> {
+                    val intent3 = Intent(this, UbicacionActivity::class.java)
                     startActivity(intent3)
                     overridePendingTransition(0,0)
-                } **/
+                }
             }
             true
         }
