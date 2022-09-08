@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.productoparrillerofood.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
+    <activity
+        android:id="@+id/platoActivity"
+        android:name="com.example.productoparrillerofood.view.ui.activity.PlatoActivity"
+        android:label="activity_plato"
+        tools:layout="@layout/activity_plato" />
+
+    <activity
+        android:id="@+id/recomendadoActivity"
+        android:name="com.example.productoparrillerofood.view.ui.activity.RecomendadoActivity"
+        android:label="activity_food"
+        tools:layout="@layout/activity_recomendado" />
+
+    //Agregar activity ubicacion
+</navigation>

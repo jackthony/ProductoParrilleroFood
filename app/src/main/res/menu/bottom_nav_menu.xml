@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainActivity"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/platotActivity"
+        android:icon="@drawable/ic_plato"
+        android:title="Todos los platos" />
+    <item
+        android:id="@+id/recomendadoActivity"
+        android:icon="@drawable/ic_recomendado"
+        android:title="Platos Típicos" />
+
+    //Agrear el item de la ubicacion
+
+
+</menu>
