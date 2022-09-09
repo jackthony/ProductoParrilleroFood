@@ -70,6 +70,8 @@ dependencies {
 
     //RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+    // For control over item selection of both touch and mouse driven selection
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
 
     //circular image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
@@ -89,6 +91,12 @@ dependencies {
     //google map
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
+    //Solucion a E/ActivityThread: Failed to find provider info for com.google.android.gms.chimera
+
+    implementation('com.google.firebase:firebase-inappmessaging-display:19.1.5', {
+        exclude group: 'io.grpc', module: 'grpc-okhttp'
+    })
+    implementation 'io.grpc:grpc-okhttp:1.32.2'
 
 
 }

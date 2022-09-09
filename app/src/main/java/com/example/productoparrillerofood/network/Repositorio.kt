@@ -3,16 +3,19 @@ package com.example.productoparrillerofood.network
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.productoparrillerofood.model.Recomendado
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
-class Repo {
+class Repositorio {
+    private val database = Firebase.database
 
     fun getRecomendadosData(): LiveData<MutableList<Recomendado>> {
         val mutableData = MutableLiveData<MutableList<Recomendado>>()
         // obtener datos de firebase
         FirebaseFirestore
             .getInstance()
-            .collection("recomendados")
+            .collection("recomendado")
             .get().addOnSuccessListener {
                     result -> val listData = mutableListOf<Recomendado>()
                                 for (document in result){

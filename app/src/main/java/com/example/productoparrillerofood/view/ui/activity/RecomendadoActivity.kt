@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.productoparrillerofood.MainActivity
 import com.example.productoparrillerofood.R
@@ -18,10 +18,11 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_recomendado.*
 
 
+
 class RecomendadoActivity : AppCompatActivity() {
 
     private lateinit var adapter: RecomendadoAdapter
-    private val viewModel by lazy { ViewModelProviders.of(this).get(RecomendadoViewModel::class.java) }
+    private val viewModel by lazy { ViewModelProvider(this)[RecomendadoViewModel::class.java] }
     private val database = Firebase.database
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,10 +87,11 @@ class RecomendadoActivity : AppCompatActivity() {
         val myRef = database.getReference("Recomendado")
         myRef.child(myRef.push().key.toString()).setValue(recomendadoList)
 
-        //observeData(binding)
+
 
     }
 
+    //observeData(binding)
     fun observeData(binding : ActivityRecomendadoBinding) {
         binding.shimmerViewContainer.startShimmer()
         viewModel.fetchRecomendadoData().observe(this, Observer {
